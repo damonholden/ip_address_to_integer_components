@@ -27,8 +27,14 @@ const ipToLong = LongIp.ipToLong("192.168.0.1") // 3232235521
 
 ## Development
 
-before committing code or publishing a new package version tests must be ran using the following command:
+Before committing code or publishing a new package version tests must be ran using the following command:
 
 ```bash
 node LongIp.test.js
+```
+
+It is also important to make sure the package actually works as an npm package before publishing:
+
+```Bash
+npm install . -g
 ```
