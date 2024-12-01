@@ -38,3 +38,9 @@ It is also important to make sure the package actually works as an npm package b
 ```Bash
 npm install . -g
 ```
+
+Also worth checking that the correct files are being published by doing a dry run:
+
+```Bash
+npm publish --dry-run
+```
