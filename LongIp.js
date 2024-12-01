@@ -31,8 +31,6 @@ class LongIp {
 	}
 }
 
-console.log(LongIp.ipToLong("192.168.0.1"));
-
 module.exports = {
 	LongIp,
 };
