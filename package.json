@@ -1,5 +1,5 @@
 {
-  "name": "ip_address_to_integer_components",
+  "name": "@damonholden/ip_address_to_integer_components",
   "version": "1.0.0",
   "description": "A simple, zero-dependency, JavaScript class for converting IP addresses to integer versions of their network address components (the IP address, broadcast address, and network address).",
   "main": "./IpAddressToIntegerComponents.js",
