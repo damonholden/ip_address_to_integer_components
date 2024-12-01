@@ -1,17 +1,15 @@
-# LongIp
+# ip_address_to_integer_components
 
-A simple, zero-dependency, package for creating long ip addresses along with long versions of the IP's broadcast and network addresses.
+A simple, zero-dependency, JavaScript class for converting IP addresses to integer versions of their network address components (the IP address, broadcast address, and network address).
 
 ## Usage
 
-There are two ways to use this package:
-
-1. Instantiate the `LongIp` class with a string representation of an IP and an integer representation of the ip's mask:
+Instantiate the `IpAddressToIntegerComponents` class with a string representation of an IP and an integer representation of the IP's mask:
 
 ```JavaScript
-const longIp = new LongIp("192.168.0.1", 16)
+const ipAddressComponents = new IpAddressToIntegerComponents("192.168.0.1", 16)
 /*
-	LongIp {
+	IpAddressToIntegerComponents {
   		address: 3232235521,
   		networkAddress: 3232235520,
   		broadcastAddress: 3232301055
@@ -19,10 +17,17 @@ const longIp = new LongIp("192.168.0.1", 16)
 */
 ```
 
-2. If you just want the long version of an IP but do not need the network and broadcast address, you can call the static method `ipToLong` of the `LongIp` class with the IP:
+Instantiating an `IpAddressToIntegerComponents` instance without providing a subnet mask will return the same interface with the `networkAddress` and `broadcastAddress` set to `null`:
 
 ```JavaScript
-const ipToLong = LongIp.ipToLong("192.168.0.1") // 3232235521
+const ipAddressComponents = new IpAddressToIntegerComponents("192.168.0.1", 16)
+/*
+	IpAddressToIntegerComponents {
+  		address: 3232235521,
+  		networkAddress: null,
+  		broadcastAddress: null
+	}
+*/
 ```
 
 ## Development
@@ -30,7 +35,7 @@ const ipToLong = LongIp.ipToLong("192.168.0.1") // 3232235521
 Before committing code or publishing a new package version tests must be ran using the following command:
 
 ```bash
-node LongIp.test.js
+npm test
 ```
 
 It is also important to make sure the package actually works as an npm package before publishing:
