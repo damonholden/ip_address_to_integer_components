@@ -2,9 +2,9 @@
   "name": "longip",
   "version": "1.0.0",
   "description": "A simple, zero-dependency, package for creating long ip addresses along with long versions of the IP's broadcast and network addresses.",
-  "main": "LongIp.js",
+  "main": "./IpAddressToIntegerComponents.js",
   "scripts": {
-    "test": "node LongIp.test.js"
+    "test": "node ./IpAddressToIntegerComponents.test.js"
   },
   "repository": {
     "type": "git",
